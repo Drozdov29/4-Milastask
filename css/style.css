@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'Myriad-Pro';
+  src: url('../font/Myriad-Pro/MyriadPro-Regular.woff2') format('woff2'),
+      url('../font/Myriad-Pro/MyriadPro-Regular.woff') format('woff'),
+      url('../font/Myriad-Pro/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../font/Poppins/Poppins-Regular.woff2') format('woff2'),
+      url('../font/Poppins/Poppins-Regular.woff') format('woff'),
+      url('../font/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../font/Poppins/Poppins-Medium.woff2') format('woff2'),
+      url('../font/Poppins/Poppins-Medium.woff') format('woff'),
+      url('../font/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-Light';
+  src: url('../font/Rubik/Rubik-Light.woff2') format('woff2'),
+      url('../font/Rubik/Rubik-Light.woff') format('woff'),
+      url('../font/Rubik/Rubik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-Medium';
+  src: url('../font/Rubik/Rubik-Medium.woff2') format('woff2'),
+      url('../font/Rubik/Rubik-Medium.woff') format('woff'),
+      url('../font/Rubik/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url('../font/Rubik/Rubik-Regular.woff2') format('woff2'),
+      url('../font/Rubik/Rubik-Regular.woff') format('woff'),
+      url('../font/Rubik/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source-Sans-Pro';
+  src: url('../font/SourceSansPro/SourceSansPro-Regular.woff2') format('woff2'),
+      url('../font/SourceSansPro/SourceSansPro-Regular.woff') format('woff'),
+      url('../font/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html, body {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik-Regular';
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.header {
+  padding: 0;
+  margin: 0 auto;
+  width: 1920px;
+  min-height: 1302px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../img/header/Img-background.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.head-nav {
+  padding-top: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+.items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.items li:not(:last-child) {
+  padding-right: 15px;
+}
+
+.item-click {
+  text-decoration: none;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.item-click::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  border-top: 2px dashed #ffffff;
+  transition: 0.7s;
+  ;
+}
+
+.item-click:hover:before,
+.item-click--active::before {
+  width: 100%;
+}
+
+.head-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-content::before {
+  position: absolute;
+  content: "";
+  bottom: 10%;
+  left: 50%;
+  width: 45px;
+  height: 67px;
+  background-image: url(../img/header/mouse-icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.content-text {
+  position: relative;
+  margin-top: 251px;
+  text-align: center;
+}
+
+.content-img{
+  width: 629px;
+  height: 802px;
+}
+
+.content-title {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Rubik-Medium';
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 65px;
+  letter-spacing: -1.5px;
+  margin-bottom: 49px;
+}
+
+.content-desc {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  line-height: 28px;
+  padding: 0 18px;
+  margin-bottom: 39px;
+}
+
+.content-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  padding: 11px 10px;
+  margin-right: 8px;
+  font-family: 'Rubik-Medium';
+  font-weight: 500;
+  color: #000000;
+  font-size: 15px;
+}
+
+.content-link:hover {
+  background: linear-gradient(90deg, rgba(119,181,116,1) 0%, rgba(53,156,180,1) 100%);
+  color: #ffffff;
+}
+
+.download--right {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Rubik-Medium';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 38px;
+  text-transform: uppercase;
+  padding-right: 7px;
+}
+
+.head-profession {
+  display: flex;
+}
+
+.profession-blog {
+  width: 390px;
+  height: 265px;
+  padding: 0 55px;
+  box-shadow: 0 0 9px rgba(73, 73, 73, 0.4);
+  background-color: #ffffff;
+}
+
+.profession-title {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-family: 'Rubik-Medium';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 58px;
+  margin-bottom: 26px;
+}
+
+.profession-subtitle {
+  padding: 0;
+  margin: 0;
+  color: #585858;
+  line-height: 26px;
+  margin-bottom: 27px;
+}
+
+.profession-link {
+  color: #000000;
+  font-family: 'Rubik-Medium';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.head-social {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-content-link:not(:last-child){
+  margin-bottom: 30px;
+}
+
+.social-content-link svg:hover path {
+  fill: #ffffff;
+}
+
+.social-content-link::before {
+  position: absolute;
+  content: "";
+  left: 30px;
+  color: #ffffff;
+  font-family: 'Rubik-Medium';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 2s all;
+  opacity: 0;
+}
+
+.social-facebook:hover::before {
+  content: "facebook";
+  opacity: 1;
+}
+
+.social-twitter:hover::before {
+  content: "twitter";
+  opacity: 1;
+}
+
+.social-dribbble:hover::before {
+  content: "dribbble";
+  opacity: 1;
+}
+
+.social-behance:hover::before {
+  content: "behance";
+  opacity: 1;
+}
+
+.social-pinterest:hover::before {
+  content: "pinterest";
+  opacity: 1;
+}
+
+
+
+
+
+
